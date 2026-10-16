@@ -1,0 +1,10 @@
+@vutrongnhualexandre ➜ /workspaces/esilv-marketpulse-g06-t06 (nhu-dao) $ pwd
+/workspaces/esilv-marketpulse-g06-t06
+@vutrongnhualexandre ➜ /workspaces/esilv-marketpulse-g06-t06 (nhu-dao) $ ls
+CONTRIBUTING.md  README.md  TEAM_TEMPLATE.md  config  data  docs  evidence  requirements.txt  src
+@vutrongnhualexandre ➜ /workspaces/esilv-marketpulse-g06-t06 (nhu-dao) $ ls-la
+bash: ls-la: command not found
+@vutrongnhualexandre ➜ /workspaces/esilv-marketpulse-g06-t06 (nhu-dao) $ ls - la
+ls: cannot access '-': No such file or directory
+ls: cannot access 'la': No such file or directory
+@vutrongnhualexandre ➜ /workspaces/esilv-marketpulse-g06-t06 (nhu-dao) $ 
