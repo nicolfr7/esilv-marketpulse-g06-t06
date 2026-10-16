@@ -24,9 +24,16 @@ drwxrwxrwx+ 2 codespace root  4096 Oct 16 09:20 evidence
 -rw-rw-rw-  1 codespace root   133 Oct 16 07:36 requirements.txt
 drwxrwxrwx+ 2 codespace root  4096 Oct 16 07:36 src
 
-CD :
-@AlexandreOml ➜ /workspaces/esilv-marketpulse-g06-t06 (alexandre-omiel) $ cd
-@AlexandreOml ➜ ~ $ ls
-java  nvm
-
 LINUX NAVIGATION :
+
+@AlexandreOml ➜ /workspaces/esilv-marketpulse-g06-t06 (alexandre-omiel) $ cd data
+@AlexandreOml ➜ /workspaces/esilv-marketpulse-g06-t06/data (alexandre-omiel) $ pwd && ls
+/workspaces/esilv-marketpulse-g06-t06/data
+sample
+@AlexandreOml ➜ /workspaces/esilv-marketpulse-g06-t06/data (alexandre-omiel) $ cd sample
+@AlexandreOml ➜ /workspaces/esilv-marketpulse-g06-t06/data/sample (alexandre-omiel) $ ls
+bloomberg_reference_expected.json  bloomberg_reference_sample.json  instruments.json  prices.csv
+@AlexandreOml ➜ /workspaces/esilv-marketpulse-g06-t06/data/sample (alexandre-omiel) $ cd ../..
+@AlexandreOml ➜ /workspaces/esilv-marketpulse-g06-t06 (alexandre-omiel) $ pwd
+/workspaces/esilv-marketpulse-g06-t06
+@AlexandreOml ➜ /workspaces/esilv-marketpulse-g06-t06 (alexandre-omiel) $ 
