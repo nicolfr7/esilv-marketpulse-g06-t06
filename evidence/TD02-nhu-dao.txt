@@ -8,3 +8,17 @@ bash: ls-la: command not found
 ls: cannot access '-': No such file or directory
 ls: cannot access 'la': No such file or directory
 @vutrongnhualexandre ➜ /workspaces/esilv-marketpulse-g06-t06 (nhu-dao) $ 
+branch 'nhu-dao' set up to track 'origin/nhu-dao'.
+@vutrongnhualexandre ➜ /workspaces/esilv-marketpulse-g06-t06 (nhu-dao) $ cd data
+@vutrongnhualexandre ➜ /workspaces/esilv-marketpulse-g06-t06/data (nhu-dao) $ cd ..
+@vutrongnhualexandre ➜ /workspaces/esilv-marketpulse-g06-t06 (nhu-dao) $ cd data
+@vutrongnhualexandre ➜ /workspaces/esilv-marketpulse-g06-t06/data (nhu-dao) $ cd ../..
+@vutrongnhualexandre ➜ /workspaces $ cd data
+bash: cd: data: No such file or directory
+@vutrongnhualexandre ➜ /workspaces $ cd evidence/TD02-nhu-dao.txt
+bash: cd: evidence/TD02-nhu-dao.txt: No such file or directory
+@vutrongnhualexandre ➜ /workspaces $ cd /workspaces/esilv-marketpulse-g06-t06/evidence/TD02-nhu-dao.txt
+bash: cd: /workspaces/esilv-marketpulse-g06-t06/evidence/TD02-nhu-dao.txt: Not a directory
+@vutrongnhualexandre ➜ /workspaces $ cd "/workspaces/esilv-marketpulse-g06-t06/evidence/TD02-nhu-dao.txt"
+bash: cd: /workspaces/esilv-marketpulse-g06-t06/evidence/TD02-nhu-dao.txt: Not a directory
+@vutrongnhualexandre ➜ /workspaces $ cd "esilv-marketpulse-g06-t06"
