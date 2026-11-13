@@ -1,0 +1,37 @@
+@Luyee74 ➜ /workspaces/esilv-marketpulse-g06-t06 (main) $ git checkout -b lucas-ye
+Switched to a new branch 'lucas-ye'
+@Luyee74 ➜ /workspaces/esilv-marketpulse-g06-t06 (lucas-ye) $ git branch
+* lucas-ye
+  main
+@Luyee74 ➜ /workspaces/esilv-marketpulse-g06-t06 (lucas-ye) $ pwd
+/workspaces/esilv-marketpulse-g06-t06
+@Luyee74 ➜ /workspaces/esilv-marketpulse-g06-t06 (lucas-ye) $ ls
+CONTRIBUTING.md  README.md  TEAM.md  config  data  docs  evidence  requirements.txt  src
+@Luyee74 ➜ /workspaces/esilv-marketpulse-g06-t06 (lucas-ye) $ ls -la
+total 60
+drwxrwxrwx+ 8 codespace root       4096 Oct 16 07:44 .
+drwxr-xrwx+ 5 codespace root       4096 Oct 16 07:27 ..
+drwxrwxrwx+ 8 codespace root       4096 Oct 16 08:42 .git
+-rw-rw-rw-  1 codespace root        178 Oct 16 07:27 .gitignore
+-rw-rw-rw-  1 codespace root       2943 Oct 16 07:27 CONTRIBUTING.md
+-rw-rw-rw-  1 codespace root      10270 Oct 16 07:27 README.md
+-rw-rw-rw-  1 codespace codespace  1476 Oct 16 07:44 TEAM.md
+drwxrwxrwx+ 2 codespace root       4096 Oct 16 07:27 config
+drwxrwxrwx+ 3 codespace root       4096 Oct 16 07:27 data
+drwxrwxrwx+ 4 codespace root       4096 Oct 16 07:27 docs
+drwxrwxrwx+ 2 codespace root       4096 Oct 16 08:50 evidence
+-rw-rw-rw-  1 codespace root        133 Oct 16 07:27 requirements.txt
+drwxrwxrwx+ 2 codespace root       4096 Oct 16 07:27 src
+@Luyee74 ➜ /workspaces/esilv-marketpulse-g06-t06 (lucas-ye) $ 
+
+@Luyee74 ➜ /workspaces/esilv-marketpulse-g06-t06 (lucas-ye) $ cd data
+@Luyee74 ➜ /workspaces/esilv-marketpulse-g06-t06/data (lucas-ye) $ pwd && ls
+/workspaces/esilv-marketpulse-g06-t06/data
+sample
+@Luyee74 ➜ /workspaces/esilv-marketpulse-g06-t06/data (lucas-ye) $ cd sample
+@Luyee74 ➜ /workspaces/esilv-marketpulse-g06-t06/data/sample (lucas-ye) $ ls
+bloomberg_reference_expected.json  bloomberg_reference_sample.json  instruments.json  prices.csv
+@Luyee74 ➜ /workspaces/esilv-marketpulse-g06-t06/data/sample (lucas-ye) $ cd ../..
+@Luyee74 ➜ /workspaces/esilv-marketpulse-g06-t06 (lucas-ye) $ pwd
+/workspaces/esilv-marketpulse-g06-t06
+

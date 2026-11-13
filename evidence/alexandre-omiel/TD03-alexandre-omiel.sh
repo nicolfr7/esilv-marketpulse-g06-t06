@@ -1,0 +1,148 @@
+LINUX NAVIGATION : 
+    @AlexandreOml ➜ /workspaces/esilv-marketpulse-g06-t06 (alexandre-omiel) $ pwd
+    /workspaces/esilv-marketpulse-g06-t06
+
+    @AlexandreOml ➜ /workspaces/esilv-marketpulse-g06-t06 (alexandre-omiel) $ ls
+    CONTRIBUTING.md  TEAM_TEMPLATE.md  data  evidence   requirements.txt
+    README.md        config            docs  notebooks  src
+
+    @AlexandreOml ➜ /workspaces/esilv-marketpulse-g06-t06 (alexandre-omiel) $ ls -l
+    total 48
+    -rw-rw-rw-  1 codespace root       2943 Oct 16 07:36 CONTRIBUTING.md
+    -rw-rw-rw-  1 codespace root      10270 Oct 16 07:36 README.md
+    -rw-rw-rw-  1 codespace root       1446 Oct 16 07:36 TEAM_TEMPLATE.md
+    drwxrwxrwx+ 2 codespace root       4096 Oct 16 07:36 config
+    drwxrwxrwx+ 3 codespace root       4096 Oct 23 06:48 data
+    drwxrwxrwx+ 4 codespace root       4096 Oct 16 07:36 docs
+    drwxrwxrwx+ 3 codespace root       4096 Oct 23 07:07 evidence
+    drwxrwxrwx+ 2 codespace codespace  4096 Oct 23 06:48 notebooks
+    -rw-rw-rw-  1 codespace root        133 Oct 16 07:36 requirements.txt
+    drwxrwxrwx+ 2 codespace root       4096 Oct 16 07:36 src
+
+    @AlexandreOml ➜ /workspaces/esilv-marketpulse-g06-t06 (alexandre-omiel) $ ls -la
+    total 64
+    drwxrwxrwx+ 9 codespace root       4096 Oct 23 07:11 .
+    drwxr-xrwx+ 5 codespace root       4096 Oct 16 07:36 ..
+    drwxrwxrwx+ 8 codespace root       4096 Oct 23 06:48 .git
+    -rw-rw-rw-  1 codespace root        178 Oct 16 07:36 .gitignore
+    -rw-rw-rw-  1 codespace root       2943 Oct 16 07:36 CONTRIBUTING.md
+    -rw-rw-rw-  1 codespace root      10270 Oct 16 07:36 README.md
+    -rw-rw-rw-  1 codespace root       1446 Oct 16 07:36 TEAM_TEMPLATE.md
+    drwxrwxrwx+ 2 codespace root       4096 Oct 16 07:36 config
+    drwxrwxrwx+ 3 codespace root       4096 Oct 23 06:48 data
+    drwxrwxrwx+ 4 codespace root       4096 Oct 16 07:36 docs
+    drwxrwxrwx+ 3 codespace root       4096 Oct 23 07:07 evidence
+    drwxrwxrwx+ 2 codespace codespace  4096 Oct 23 06:48 notebooks
+    -rw-rw-rw-  1 codespace root        133 Oct 16 07:36 requirements.txt
+    drwxrwxrwx+ 2 codespace root       4096 Oct 16 07:36 src
+
+    @AlexandreOml ➜ /workspaces/esilv-marketpulse-g06-t06 (alexandre-omiel) $ cd data
+    @AlexandreOml ➜ /workspaces/esilv-marketpulse-g06-t06/data (alexandre-omiel) $ ls
+    README.md  sample
+    @AlexandreOml ➜ /workspaces/esilv-marketpulse-g06-t06/data (alexandre-omiel) $ cd ..
+    @AlexandreOml ➜ /workspaces/esilv-marketpulse-g06-t06 (alexandre-omiel) $ cd evidence/alexandre-omiel/
+    @AlexandreOml ➜ /workspaces/esilv-marketpulse-g06-t06/evidence/alexandre-omiel (alexandre-omiel) $ cd ../..
+    @AlexandreOml ➜ /workspaces/esilv-marketpulse-g06-t06 (alexandre-omiel) $ ls
+    CONTRIBUTING.md  TEAM_TEMPLATE.md  data  evidence   requirements.txt
+    README.md        config            docs  notebooks  src
+
+    @AlexandreOml ➜ /workspaces/esilv-marketpulse-g06-t06/evidence/alexandre-omiel (alexandre-omiel) $ cd ~
+    @AlexandreOml ➜ ~ $ ls
+    java  nvm
+
+    @AlexandreOml ➜ /workspaces/esilv-marketpulse-g06-t06 (alexandre-omiel) $ ls
+    CONTRIBUTING.md  TEAM_TEMPLATE.md  data  evidence   requirements.txt
+    README.md        config            docs  notebooks  src
+    @AlexandreOml ➜ /workspaces/esilv-marketpulse-g06-t06 (alexandre-omiel) $ cd evidence
+    @AlexandreOml ➜ /workspaces/esilv-marketpulse-g06-t06/evidence (alexandre-omiel) $ mkdir alexandre-omiel
+    @AlexandreOml ➜ /workspaces/esilv-marketpulse-g06-t06/evidence (alexandre-omiel) $ ls -la
+    total 24
+    drwxrwxrwx+ 3 codespace root      4096 Oct 23 07:20 .
+    drwxrwxrwx+ 9 codespace root      4096 Oct 23 07:11 ..
+    -rw-rw-rw-  1 codespace root      1437 Oct 16 07:36 README.md
+    -rw-rw-rw-  1 codespace codespace 1979 Oct 16 09:41 TD02-alexandre-omiel.txt
+    -rw-rw-rw-  1 codespace codespace 2002 Oct 23 07:19 TD03-alexandre-omiel.txt
+    drwxrwxrwx+ 2 codespace codespace 4096 Oct 23 07:20 alexandre-omiel
+
+    @AlexandreOml ➜ /workspaces/esilv-marketpulse-g06-t06/evidence (alexandre-omiel) $ mv TD02-alexandre-omiel.txt alexandre-omiel/TD02-alexandre-omiel.txt
+    @AlexandreOml ➜ /workspaces/esilv-marketpulse-g06-t06/evidence (alexandre-omiel) $ mv TD03-alexandre-omiel.txt  alexandre-omiel/TD03-alexandre-omiel.txt
+    @AlexandreOml ➜ /workspaces/esilv-marketpulse-g06-t06/evidence (alexandre-omiel) $ ls
+    README.md  alexandre-omiel
+    @AlexandreOml ➜ /workspaces/esilv-marketpulse-g06-t06/evidence (alexandre-omiel) $ cd alexandre-omiel/
+    @AlexandreOml ➜ /workspaces/esilv-marketpulse-g06-t06/evidence/alexandre-omiel (alexandre-omiel) $ ls
+    TD02-alexandre-omiel.txt  TD03-alexandre-omiel.txt
+    @AlexandreOml ➜ /workspaces/esilv-marketpulse-g06-t06/evidence/alexandre-omiel (alexandre-omiel) $ 
+
+JSON METADATA : 
+
+    @AlexandreOml ➜ /workspaces/esilv-marketpulse-g06-t06 (alexandre-omiel) $ cat data/sample/instruments.json
+    {
+    "instrument": {
+        "ticker": "AAPL",
+        "name": "Apple Inc.",
+        "currency": "USD",
+        "market": "NASDAQ"
+    },
+    "benchmark": {
+        "ticker": "SP500",
+        "name": "S&P 500",
+        "currency": "USD",
+        "market": "US"
+    }
+    }
+
+    @AlexandreOml ➜ /workspaces/esilv-marketpulse-g06-t06 (alexandre-omiel) $ head data/sample/prices.csv
+    date,ticker,open,high,low,close,volume
+    2026-09-01,AAPL,249.20,251.50,248.00,250.00,38000000
+    2026-09-01,SP500,6592.00,6615.00,6580.00,6600.00,0
+    2026-09-02,AAPL,250.80,252.80,249.60,251.30,39500000
+    2026-09-02,SP500,6607.00,6627.00,6595.00,6612.00,0
+    2026-09-03,AAPL,249.60,251.30,248.40,249.80,41000000
+    2026-09-03,SP500,6596.00,6613.00,6584.00,6598.00,0
+    2026-09-04,AAPL,251.30,253.60,250.10,252.10,42500000
+    2026-09-04,SP500,6612.00,6635.00,6600.00,6620.00,0
+    2026-09-08,AAPL,251.90,253.90,250.70,252.40,44000000
+
+@AlexandreOml ➜ /workspaces/esilv-marketpulse-g06-t06 (alexandre-omiel) $ grep AAPL data/sample/prices.csv
+2026-09-01,AAPL,249.20,251.50,248.00,250.00,38000000
+2026-09-02,AAPL,250.80,252.80,249.60,251.30,39500000
+2026-09-03,AAPL,249.60,251.30,248.40,249.80,41000000
+2026-09-04,AAPL,251.30,253.60,250.10,252.10,42500000
+2026-09-08,AAPL,251.90,253.90,250.70,252.40,44000000
+2026-09-09,AAPL,254.00,255.70,252.80,254.20,38000000
+2026-09-10,AAPL,254.30,256.60,253.10,255.10,39500000
+2026-09-11,AAPL,254.20,256.20,253.00,254.70,41000000
+2026-09-14,AAPL,256.60,258.30,255.40,256.80,42500000
+2026-09-15,AAPL,257.20,259.50,256.00,258.00,44000000
+2026-09-16,AAPL,256.70,258.70,255.50,257.20,38000000
+2026-09-17,AAPL,259.20,260.90,258.00,259.40,39500000
+2026-09-18,AAPL,259.30,261.60,258.10,260.10,41000000
+2026-09-21,AAPL,259.10,261.10,257.90,259.60,42500000
+2026-09-22,AAPL,261.10,262.80,259.90,261.30,44000000
+2026-09-23,AAPL,261.20,263.50,260.00,262.00,38000000
+2026-09-24,AAPL,263.00,265.00,261.80,263.50,39500000
+2026-09-25,AAPL,262.60,264.30,261.40,262.80,41000000
+2026-09-28,AAPL,263.30,265.60,262.10,264.10,42500000
+2026-09-29,AAPL,264.50,266.50,263.30,265.00,44000000
+2026-09-30,AAPL,266.00,267.70,264.80,266.20,38000000
+@AlexandreOml ➜ /workspaces/esilv-marketpulse-g06-t06 (alexandre-omiel) $ grep SP500 data/sample/prices.csv
+2026-09-01,SP500,6592.00,6615.00,6580.00,6600.00,0
+2026-09-02,SP500,6607.00,6627.00,6595.00,6612.00,0
+2026-09-03,SP500,6596.00,6613.00,6584.00,6598.00,0
+2026-09-04,SP500,6612.00,6635.00,6600.00,6620.00,0
+2026-09-08,SP500,6623.00,6643.00,6611.00,6628.00,0
+2026-09-09,SP500,6640.00,6657.00,6628.00,6642.00,0
+2026-09-10,SP500,6642.00,6665.00,6630.00,6650.00,0
+2026-09-11,SP500,6642.00,6662.00,6630.00,6647.00,0
+2026-09-14,SP500,6663.00,6680.00,6651.00,6665.00,0
+2026-09-15,SP500,6664.00,6687.00,6652.00,6672.00,0
+2026-09-16,SP500,6663.00,6683.00,6651.00,6668.00,0
+2026-09-17,SP500,6683.00,6700.00,6671.00,6685.00,0
+2026-09-18,SP500,6684.00,6707.00,6672.00,6692.00,0
+2026-09-21,SP500,6683.00,6703.00,6671.00,6688.00,0
+2026-09-22,SP500,6703.00,6720.00,6691.00,6705.00,0
+2026-09-23,SP500,6704.00,6727.00,6692.00,6712.00,0
+2026-09-24,SP500,6715.00,6735.00,6703.00,6720.00,0
+2026-09-25,SP500,6713.00,6730.00,6701.00,6715.00,0
+2026-09-28,SP500,6720.00,6743.00,6708.00,6728.00,0
+2026-09-29,SP500,6729.00,6749.00,6717.00,6734.00,0
