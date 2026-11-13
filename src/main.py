@@ -15,6 +15,7 @@ INTERVAL_LABEL = "Daily"
 def load_instruments():
     with open(DATA_DIR / "instruments.json", encoding="utf-8") as file:
         return json.load(file)
+    
 
 
 def load_prices():
@@ -55,6 +56,8 @@ def main():
     print("Observations")
     print(f"{instrument['ticker']}: {len(instrument_prices)}")
     print(f"{benchmark['ticker']}: {len(benchmark_prices)}")
+    print(f"Market:{instrument['market']}")
+    print(f"Market: {benchmark['market']}")
 
 
 if __name__ == "__main__":
