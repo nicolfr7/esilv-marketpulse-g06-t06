@@ -230,6 +230,14 @@ The complete dependency model, including standard-library modules, transitive de
 
 Do not add packages that are not actually required by the implementation.
 
+## Run MarketPulse
+
+Run the application from the project root:
+
+```bash
+python src/main.py
+```
+
 ## Bloomberg teaching modes
 
 The Bloomberg stage supports two authorized classroom modes:
