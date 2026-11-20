@@ -11,18 +11,39 @@ CANONICAL_TO_YAHOO = {
 }
 
 
-def fetch_yahoo_prices(canonical_ticker, lookback="1mo", interval="1d"):
-    if canonical_ticker not in CANONICAL_TO_YAHOO:
-        raise ValueError(f"Unknown ticker: {canonical_ticker}")
+def fetch_yahoo_prices(
+    symbol,
+    canonical_ticker,
+    period="1mo",
+    interval="1d",
+):
+    """
+    Retrieve historical market prices from Yahoo Finance and normalize to canonical format.
 
-    yahoo_symbol = CANONICAL_TO_YAHOO[canonical_ticker]
-    raw = yf.Ticker(yahoo_symbol).history(period=lookback, interval=interval)
+    Args:
+        symbol (str): Yahoo Finance symbol (e.g., 'AAPL' or '^GSPC').
+        canonical_ticker (str): Internal canonical ticker (e.g., 'AAPL' or 'SP500').
+        period (str): Historical lookback window (default: '1mo').
+        interval (str): Price frequency (default: '1d').
 
-    if raw.empty:
-        raise ValueError(f"No data returned by Yahoo for {yahoo_symbol}")
+    Returns:
+        list: Canonical observation dicts (date, ticker, open, high, low, close, volume),
+        sorted by date ascending.
+    """
+    history = yf.Ticker(symbol).history(
+        period=period,
+        interval=interval,
+        auto_adjust=False,
+    )
+
+    if history.empty:
+        raise ValueError(
+            f"No Yahoo Finance data returned for symbol {symbol} "
+            f"(period={period}, interval={interval})."
+        )
 
     rows = []
-    for timestamp, row in raw.iterrows():
+    for timestamp, row in history.iterrows():
         rows.append(
             {
                 "date": timestamp.strftime("%Y-%m-%d"),
