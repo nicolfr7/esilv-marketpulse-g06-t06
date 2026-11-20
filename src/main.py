@@ -1,6 +1,11 @@
 from pathlib import Path
 import csv
 import json
+import sys
+
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+
+from src.providers.yahoo_provider import CANONICAL_TO_YAHOO, fetch_yahoo_prices
 
 
 DATA_DIR = Path("data/sample")
@@ -10,12 +15,12 @@ DATA_DIR = Path("data/sample")
 # Parsing YAML is optional and is not required by the 18-hour lab sequence.
 LOOKBACK_LABEL = "1 month"
 INTERVAL_LABEL = "Daily"
+PROVIDER = "yahoo"   # "csv" pour revenir aux fichiers locaux
 
 
 def load_instruments():
     with open(DATA_DIR / "instruments.json", encoding="utf-8") as file:
         return json.load(file)
-    
 
 
 def load_prices():
@@ -36,19 +41,27 @@ def get_last_date(prices):
 
 def main():
     instruments = load_instruments()
-    prices = load_prices()
 
     instrument = instruments["instrument"]
     benchmark = instruments["benchmark"]
 
-    instrument_prices = filter_prices(prices, instrument["ticker"])
-    benchmark_prices = filter_prices(prices, benchmark["ticker"])
+    if PROVIDER == "yahoo":
+        instrument_prices = fetch_yahoo_prices(
+            CANONICAL_TO_YAHOO[instrument["ticker"]], instrument["ticker"], "1mo", "1d"
+        )
+        benchmark_prices = fetch_yahoo_prices(
+            CANONICAL_TO_YAHOO[benchmark["ticker"]], benchmark["ticker"], "1mo", "1d"
+        )
+    else:
+        prices = load_prices()
+        instrument_prices = filter_prices(prices, instrument["ticker"])
+        benchmark_prices = filter_prices(prices, benchmark["ticker"])
 
     instrument_latest = instrument_prices[-1]
     benchmark_latest = benchmark_prices[-1]
 
     print("=== MarketPulse ===")
-    print("Data source: Local CSV")
+    print("Data source: Yahoo Finance" if PROVIDER == "yahoo" else "Data source: Local CSV")
     print()
     print("Instrument")
     print(f"{instrument['ticker']} - {instrument['name']}")
