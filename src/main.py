@@ -3,19 +3,22 @@ import csv
 import json
 import sys
 
-sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+# Permet les imports "src." avec : python src/main.py
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
+import src.analytics as analytics
 from src.providers.yahoo_provider import CANONICAL_TO_YAHOO, fetch_yahoo_prices
 
-
 DATA_DIR = Path("data/sample")
+
+# "yahoo" for Yahoo Finance, "csv" for the local file
+PROVIDER = "yahoo"
 
 # These starter values mirror config/settings.yml.
 # settings.yml is a human-readable configuration contract in the CORE.
 # Parsing YAML is optional and is not required by the 18-hour lab sequence.
 LOOKBACK_LABEL = "1 month"
 INTERVAL_LABEL = "Daily"
-PROVIDER = "yahoo"   # "csv" pour revenir aux fichiers locaux
 
 
 def load_instruments():
@@ -30,6 +33,7 @@ def load_prices():
 
 def filter_prices(prices, ticker):
     return [row for row in prices if row["ticker"] == ticker]
+
 
 def get_first_date(prices):
     return prices[0]["date"]
@@ -66,14 +70,14 @@ def main():
     print("Instrument")
     print(f"{instrument['ticker']} - {instrument['name']}")
     print(f"Market: {instrument['market']}")
-    print(f"{instrument['ticker']} price: {instrument_latest['close']} {instrument['currency']}")
+    print(f"{instrument['ticker']} price: {float(instrument_latest['close']):.2f} {instrument['currency']}")
     print(f"First observation: {get_first_date(instrument_prices)}")
     print(f"Last observation: {get_last_date(instrument_prices)}")
     print()
     print("Benchmark")
     print(f"{benchmark['ticker']} - {benchmark['name']}")
     print(f"Market: {benchmark['market']}")
-    print(f"Last level: {benchmark_latest['close']}")
+    print(f"Last level: {float(benchmark_latest['close']):.2f}")
     print(f"First observation: {get_first_date(benchmark_prices)}")
     print(f"Last observation: {get_last_date(benchmark_prices)}")
     print()
@@ -83,8 +87,26 @@ def main():
     print("Observations")
     print(f"{instrument['ticker']}: {len(instrument_prices)}")
     print(f"{benchmark['ticker']}: {len(benchmark_prices)}")
-    print(f"Market:{instrument['market']}")
-    print(f"Market: {benchmark['market']}")
+
+    aligned_instrument, aligned_benchmark = analytics.align_series(
+        instrument_prices, benchmark_prices
+    )
+    instrument_return = analytics.calculate_period_return(aligned_instrument)
+    benchmark_return = analytics.calculate_period_return(aligned_benchmark)
+    relative = analytics.calculate_relative_performance(
+        instrument_return, benchmark_return
+    )
+    instrument_base = analytics.calculate_base_100(aligned_instrument)
+    benchmark_base = analytics.calculate_base_100(aligned_benchmark)
+
+    print()
+    print("Performance")
+    print(f"Common dates: {len(aligned_instrument)}")
+    print(f"{instrument['ticker']} return: {instrument_return:+.2f}%")
+    print(f"{benchmark['ticker']} return: {benchmark_return:+.2f}%")
+    print(f"Relative performance: {relative:+.2f} pts")
+    print(f"{instrument['ticker']} final base 100: {instrument_base[-1]['value']:.2f}")
+    print(f"{benchmark['ticker']} final base 100: {benchmark_base[-1]['value']:.2f}")
 
 
 if __name__ == "__main__":
